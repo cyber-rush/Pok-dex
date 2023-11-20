@@ -134,13 +134,13 @@ const ListingPage = () => {
             <div className="flex flex-wrap justify-center space-y-4 sm:space-x-4 sm:space-y-0 mt-4 mb-4 sm:mb-8 sm:mt-8">
                 <select name="abilities" value={filters.abilities} onChange={handleFilterChange} className="w-full sm:w-auto px-4 py-2 border border-gray-300 rounded-md sm:block">
                     <option value="">Select Ability</option>
-                    {abilityOptions.map((ability, index) => (
+                    {abilityOptions.length > 0 && abilityOptions.map((ability, index) => (
                         <option key={index} value={ability}>{ability}</option>
                     ))}
                 </select>
                 <select name="habitat" value={filters.habitat} onChange={handleFilterChange} className="w-full sm:w-auto px-4 py-2 border border-gray-300 rounded-md sm:block">
                     <option value="">Select Habitat</option>
-                    {habitatOptions.map((habitat, index) => (
+                    {habitatOptions.length > 0 && habitatOptions.map((habitat, index) => (
                         <option key={index} value={habitat}>{habitat}</option>
                     ))}
                 </select>
