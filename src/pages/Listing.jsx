@@ -73,6 +73,8 @@ const ListingPage = () => {
                 const sortedAbilities = Array.from(abilitiesSet).sort();
                 const sortedHabitats = Array.from(habitatSet).sort();
 
+                console.log(sortedAbilities, sortedHabitats)
+
                 setAbilityOptions(sortedAbilities);
                 setHabitatOptions(sortedHabitats);
             } catch (err) {
