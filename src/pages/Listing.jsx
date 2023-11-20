@@ -69,8 +69,12 @@ const ListingPage = () => {
                     habitatSet.add(habitat);
                 }
 
-                setAbilityOptions(Array.from(abilitiesSet));
-                setHabitatOptions(Array.from(habitatSet));
+                // Convert sets to arrays and sort them
+                const sortedAbilities = Array.from(abilitiesSet).sort();
+                const sortedHabitats = Array.from(habitatSet).sort();
+
+                setAbilityOptions(sortedAbilities);
+                setHabitatOptions(sortedHabitats);
             } catch (err) {
                 setError('Failed to fetch options.');
             }
