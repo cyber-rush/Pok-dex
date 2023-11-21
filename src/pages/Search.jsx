@@ -47,6 +47,7 @@ const SearchPage = () => {
             </div>
             {isLoading && <p className="text-blue-500">Loading...</p>}
             {error && <p className="text-red-500">Error: No such Pokemon exists</p>}
+            <Link to="/bookmarks" className="block mt-4 text-blue-600 underline">Go to Bookmarks</Link>
         </div>
     );
 };
